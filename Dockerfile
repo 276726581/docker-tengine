@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-LABEL maintainer="https://github.com/weixu365/docker-tengine"
+MAINTAINER TENGINE Docker Maintainers "276726581@qq.com"
 
 ENV TENGINE_VERSION 2.2.1
 
@@ -104,7 +104,7 @@ RUN CONFIG="\
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 80 443
 
 STOPSIGNAL SIGTERM
 
