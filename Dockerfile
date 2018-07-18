@@ -103,9 +103,10 @@ RUN CONFIG="\
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
+COPY upstream.conf /etc/nginx/upstream.conf
+RUN mkdir /etc/nginx/dyups
+COPY test_dyups.conf /etc/nginx/dyups/test_dyups.conf
 
-EXPOSE 80 443
-
-STOPSIGNAL SIGTERM
+EXPOSE 80 443 8090
 
 CMD ["nginx", "-g", "daemon off;"]
