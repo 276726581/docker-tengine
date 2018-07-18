@@ -44,6 +44,7 @@ RUN CONFIG="\
     --with-http_concat_module \
     --with-http_sysguard_module \
     --with-http_dyups_module \
+    --with-http_upstream_check_module \
 	" \
 	&& addgroup -S nginx \
 	&& adduser -D -S -h /var/cache/nginx -s /sbin/nologin -G nginx nginx \
